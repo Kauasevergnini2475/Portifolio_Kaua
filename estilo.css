@@ -120,3 +120,7 @@ section img {
     height: auto; 
     border-radius: 20px;
 }
+
+footer{
+    max-width: 50%;
+}
