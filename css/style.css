@@ -1,0 +1,376 @@
+/* ================================
+   RESET E CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #0f172a;   /* azul escuro corporativo */
+    --cor-secundaria: #2563eb; /* azul moderno */
+    --cor-destaque: #16a34a;   /* verde leve (dados / crescimento) */
+    --cor-texto: #1f2933;
+    --cor-texto-claro: #6b7280;
+    --cor-fundo: #f8fafc;
+    --cor-branco: #ffffff;
+    --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --raio: 12px;
+    --transicao: 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ================================
+   NAVEGAÇÃO
+================================ */
+
+nav {
+    background-color: var(--cor-primaria);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* ================================
+   CONTEÚDO PRINCIPAL
+================================ */
+
+main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: var(--cor-branco);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--cor-primaria);
+    border-left: 5px solid var(--cor-secundaria);
+    padding-left: 1rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+}
+
+/* ================================
+   LISTAS (FORMAÇÃO, EXPERIÊNCIA, CURSOS)
+================================ */
+
+ul {
+    padding-left: 1.2rem;
+}
+
+ul li {
+    margin-bottom: 1.2rem;
+    color: var(--cor-texto);
+}
+
+ul li strong {
+    color: var(--cor-primaria);
+}
+
+/* Links de PDF */
+a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* ================================
+   VÍDEOS
+================================ */
+
+video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--raio);
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+/* ================================
+   BOTÕES (se precisar futuramente)
+================================ */
+
+.button {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.button:hover {
+    background-color: var(--cor-destaque);
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    nav ul {
+        gap: 1.2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    main {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+/* ================================
+   SEÇÃO DE VÍDEOS
+================================ */
+
+#videos video {
+    width: 100%;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.header.teste {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+nav {
+    /* Define que ele ocupa o topo, mas sem ficar preso */
+    width: 100%;
+    
+    /* Garante que ele não tenha posições fixas ou sticky */
+    position: relative; 
+    
+    /* Estética opcional */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ================================
+   VÍDEOS E IMAGENS (Padronizados)
+================================ */
+
+video, img {
+    width: 100%;
+    max-width: 100%; /* Garante que não ultrapasse o limite do container */
+    height: auto;    /* Mantém a proporção da imagem */
+    border-radius: var(--raio);
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+    display: block;  /* Remove espaços vazios abaixo da imagem */
+}
+
+
+.video-vertical {
+    max-width: 350px; /* Largura ideal para um vídeo de celular na tela do PC */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cria colunas automáticas */
+    gap: 20px;
+}
+
+/* Container para alinhar foto e texto lado a lado */
+.header-container {
+    display: flex;
+    align-items: center;    /* Alinha verticalmente no centro */
+    justify-content: center; /* Centraliza o conjunto todo no header */
+    gap: 20px;              /* Espaço entre a foto e o texto */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ================================
+   SEÇÃO DE FOTOS FINAIS
+================================ */
+
+.fotos-finais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem auto;
+    max-width: 1100px;
+    padding: 0 1.5rem;
+}
+
+.foto-item {
+    flex: 1; /* Faz as duas fotos terem o mesmo tamanho */
+    max-width: 400px;
+    text-align: center;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 500px;        /* Altura fixa para manter o padrão */
+    object-fit: cover;    /* Corta a imagem sem esticar para caber no espaço */
+    border-radius: var(--raio); /* Usa o mesmo arredondamento dos vídeos */
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+/* Efeito ao passar o mouse */
+.foto-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.foto-item p {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto-claro);
+    font-style: italic;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .fotos-finais {
+        flex-direction: column;
+        align-items: center;
+    }
+    .foto-item {
+        width: 100%;
+    }
+}
